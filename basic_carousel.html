@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+  <head>
+    <title>Basic carousel</title>
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+	<![endif]-->
+
+	<!-- Internet Explorer 8 or older versions doesn't support CSS3 media queries. I enable it by importing css3-mediaqueries.js Javascript file. -->
+	<!--[if lt IE 9]>
+	    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->  
+
+	<!-- importing custom css -->
+	<link rel="stylesheet" href="./css/main.css" type="text/css" media="all"/>
+
+	<noscript>
+		<p class="no-js">You need Javascript enabled to view all of the content on this page.</p>
+    </noscript>
+	
+  </head>
+  <body>
+  	<div class="content">
+		<div id="instructions">
+			<h1 class="main-heading"></h1>
+			
+			<div id="carousel">
+				<!-- carousel item -->
+				<ul class="items"></ul>
+				
+				<!-- carousel controls -->
+				<div class="controls">
+					<ul>
+						<li class="prev"><a href="#"></a></li>
+						<li class="nav-dots is-active"><a href="#1"></a></li>
+						<li class="nav-dots"><a href="#2"></a></li>
+						<li class="nav-dots"><a href="#3"></a></li>
+						<li class="next"><a href="#"></a></li>
+					</ul>
+				</div>	
+			</div>		
+			<div class="clear"></div>		
+		</div>
+	</div>
+	<!-- importing jquery library -->
+  	<script src="./js/jquery-1.11.2.min.js" type="text/javascript" ></script>
+  	<!-- importing custom script file -->
+ 	<script src="./js/function.js" type="text/javascript" ></script> 
+</body>
+</html>
+				
+
+			

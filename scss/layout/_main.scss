@@ -1,0 +1,137 @@
+#carousel{
+	@extend %clearfix;
+	overflow: hidden;
+	width: 100%;
+	float: left;
+
+	.items{
+		position: relative;
+		width: 1200%;
+		margin: 0px;
+		padding: 0px;
+		left: 0px;
+
+		&__item{
+			float:left;
+			width: 1.995%;
+			margin: 5px 5px 10px 5px;
+
+			@include phone{
+				width: 1.9%;	
+			}
+
+			@include deskop_tablets{
+				width: 1.98%;	
+			}
+
+			.item-heading-link{
+
+				.item-heading{
+					@include font-size(20px);
+					margin-bottom: 7px;
+
+					@include phone{
+						@include font-size($text-size--small);
+						margin-bottom: 3px;
+					}	
+
+					@include deskop_tablets{
+						@include font-size(18px);
+					}
+					
+					&:before{
+						width: 14px;
+					    height: 30px;
+						display: inline-block;
+						content: "\003e";
+						@include font-size(25px);
+						padding-right: 5px;
+						cursor:pointer;
+						color:$yellow-colour;
+
+						@include phone{
+							@include font-size(20px);
+						}
+
+						@include deskop_tablets{
+							@include font-size(22px);
+						}
+					}
+				}
+			}
+
+			.item-desc{
+				padding: 0 20px;
+				@include font-size($text-size--small);
+				color: $primary-color;
+
+				@include phone{
+					padding: 0 5px;
+					@include font-size($text-size--x-small);
+				}	
+
+				@include deskop_tablets{
+					@include font-size(13px);
+				}
+			}
+
+			.item-link{
+				display: block;
+
+				img{
+					margin-bottom:-4px; /* IE is making a 4px gap bellow an image inside of an anchor (<a href...>) so this is to fix that*/  
+					cursor:pointer;  
+					cursor: hand;  
+					border:0px;
+					height: auto;
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+		}
+	}
+
+	.controls{
+		clear: both;
+		text-align: center;
+		padding: 20px;
+		display: none;
+
+		ul{
+			li{
+				display: inline;
+			}
+
+			.prev, .next{
+				width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			    cursor: pointer;
+			}
+
+			.prev{	
+			    background: url(../img/carousel_sprite.png) -3px -23px;	
+			}
+
+			.next{
+			    background: url(../img/carousel_sprite.png) -3px -59px;	
+			}
+
+			.nav-dots{
+				width: 20px;
+			    height: 30px;
+				background: url(../img/carousel_sprite.png) -30px -91px;	
+				display: inline-block;
+				cursor: pointer;
+			}
+
+			.is-active{
+				background: url(../img/carousel_sprite.png) -51px -91px;
+			}
+		}
+	}
+}
+
+
+
+
